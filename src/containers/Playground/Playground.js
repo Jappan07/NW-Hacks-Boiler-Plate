@@ -1,4 +1,5 @@
 import React from "react"
+import AudioDataContainer from "../Visualizer/AudioDataContainer"
 
 const playground = () => {
     return (
@@ -6,6 +7,7 @@ const playground = () => {
             <h1>
                 Playground
             </h1>
+            <AudioDataContainer />
         </div>
     )
 }
