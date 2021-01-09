@@ -10,8 +10,7 @@ import Register from "./containers/Auth/Register/Register"
 import { UseStateValue } from "./store/StateProvider"
 
 const App = () => {
-  const [{user}] = UseStateValue();
-
+  const [{ user }] = UseStateValue();
   let routes;
 
   if (!user) {
@@ -25,19 +24,19 @@ const App = () => {
       </Switch>
     );
   } else {
-    routes = ( 
+    routes = (
       <Suspense fallback={<div>Loading...</div>}>
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/contact-us" component={ContactUs} />
-          <Route exact path="/Playground" component={Playground} />
+          <Route exact path="/playground" component={Playground} />
           {/* <Route exact path="/logout" component={Logout} /> */}
-          <Redirect to="/Playground" />
+          <Redirect to="/playground" />
         </Switch>
-    </Suspense>
+      </Suspense>
     );
   }
-  
+
   return (
     <BrowserRouter>
       <Layout>

@@ -65,29 +65,37 @@ class Homepage extends Component {
                             <div className={classes.ProfileBox}>
                                 <div className={classes.Author}>
                                     <img src={anushProfile} alt="Anush Krishna" />
-                                    <a href="https://www.linkedin.com/in/anush-krishna-v-8270941a0/" target="_blank" rel="noreferrer"><h5>Anush Krishna V</h5></a>
-                                    <span>ML Enthusiast</span>
+                                    <div>
+                                        <a href="https://www.linkedin.com/in/anush-krishna-v-8270941a0/" target="_blank" rel="noreferrer"><h5>Anush Krishna V</h5></a>
+                                        <span>ML Enthusiast</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className={classes.ProfileBox}>
                                 <div className={classes.Author}>
                                     <img src={jappanProfile} alt="Jappanjeet Singh" />
-                                    <a href="https://www.linkedin.com/in/jappanjeet-singh/" target="_blank" rel="noreferrer"><h5>Jappanjeet Singh</h5></a>
-                                    <span>Frontend Developer</span>
+                                    <div>
+                                        <a href="https://www.linkedin.com/in/jappanjeet-singh/" target="_blank" rel="noreferrer"><h5>Jappanjeet Singh</h5></a>
+                                        <span>Frontend Developer</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className={classes.ProfileBox}>
                                 <div className={classes.Author}>
                                     <img src={vedantProfile} alt="Vedant Khairnar" />
-                                    <a href="https://www.linkedin.com/in/vedantkhairnar/" target="_blank" rel="noreferrer"><h5>Vedant Khairnar</h5></a>
-                                    <span>ML Enthusiast</span>
+                                    <div>
+                                        <a href="https://www.linkedin.com/in/vedantkhairnar/" target="_blank" rel="noreferrer"><h5>Vedant Khairnar</h5></a>
+                                        <span>ML Enthusiast</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className={classes.ProfileBox}>
                                 <div className={classes.Author}>
                                     <img src={riteshProfile} alt="Ritesh Bucha" />
-                                    <a href="https://www.linkedin.com/in/bucharitesh/" target="_blank" rel="noreferrer"><h5>Ritesh Bucha</h5></a>
-                                    <span>Full Stack Developer</span>
+                                    <div>
+                                        <a href="https://www.linkedin.com/in/bucharitesh/" target="_blank" rel="noreferrer"><h5>Ritesh Bucha</h5></a>
+                                        <span>Full Stack Developer</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

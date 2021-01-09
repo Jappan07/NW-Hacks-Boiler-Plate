@@ -145,7 +145,7 @@
     display: flex;
     align-items: center;
     padding: 28px;
-    width: 50%;
+    width: 70%;
     height: 500px;
     background-color: #fff;
     margin-right: 30px;
@@ -218,6 +218,13 @@
     padding: 20px 30px;
 }
 
+.Author {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+}
+
 .Author img {
     float: left;
     width: 120px;
@@ -225,9 +232,9 @@
     margin-right: 15px;
 }
 
+
 .Author h5 {
     font-size: 1.2rem;
-    margin: 0;
 }
 
 .Author span {
@@ -238,4 +245,31 @@
 .Author a {
     color: #fff;
     text-decoration: none;
+}
+
+@media screen and (max-width:1000px) {
+    .Hero {
+        text-align: center;
+    }
+
+    .Content h1 {
+        font-size: 1.8rem;
+    }
+
+    .ProfileSection {
+        flex-direction: column;
+    }
+
+    .ProfileBox {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .Features {
+        flex-direction: column;
+    }
+
+    #icon {
+        transform: rotate(90deg);
+    }
 }
