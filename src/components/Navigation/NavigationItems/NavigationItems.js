@@ -13,7 +13,7 @@ const navigationItems = () => {
             {user == null ?      
                 <NavigationItem link="/u/login">Login</NavigationItem>
             :
-                <NavigationItem link="/u/slogout">Logout</NavigationItem>
+                <NavigationItem link="/u/logout">Logout</NavigationItem>
             }
             <NavigationItem link="/contact-us">Contact Us</NavigationItem>
         </ul>
