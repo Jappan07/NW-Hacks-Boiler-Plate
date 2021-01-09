@@ -4,7 +4,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import EqualizerIcon from '@material-ui/icons/Equalizer';
 import { makeStyles } from '@material-ui/core/styles';
-import './App.css';
+import classes from "./Visualizer.module.css";
 
 const useStyles = makeStyles(theme => ({
     flexContainer: {
@@ -37,15 +37,13 @@ export default function VisualDemo(props) {
         requestAnimationFrame(runSpectrum)
     }
 
-    function handleStartBottonClick() {
+    function handleStartButtonClick() {
         props.initializeAudioAnalyser()
         requestAnimationFrame(runSpectrum)
     }
 
     return (
-
-        <div>
-
+        <div className="">
             <div>
                 <Tooltip
                     title="Start"
@@ -53,7 +51,7 @@ export default function VisualDemo(props) {
                     placement="right">
                     <IconButton
                         id='startButton'
-                        onClick={() => handleStartBottonClick()}
+                        onClick={() => handleStartButtonClick()}
                         disabled={!!props.audioData ? true : false}>
                         <EqualizerIcon />
                     </IconButton>
