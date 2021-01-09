@@ -23,7 +23,7 @@ class Homepage extends Component {
     render() {
         return (
             <Wrapper>
-                <div className={classes.Hero}>
+                <div id="hero" className={classes.Hero}>
                     <div className={classes.Content}>
                         <h1>Convert Gestures to <span className={classes.AnimateMusic}>Music</span></h1>
                         <div className={classes.Button}>
@@ -103,7 +103,7 @@ class Homepage extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="footer">
+                <section id="footer">
                     <div className={classes.TeamContainer}>
                         <span><img src={teamLogo} alt="Hacker House logo" /></span>
                         <h1>Created with <FavoriteIcon style={{ fontSize: "20px", position: "relative", top: "3px" }} className={classes.Heart} /> by team HACKER HOUSE</h1>

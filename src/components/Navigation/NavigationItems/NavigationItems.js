@@ -4,18 +4,18 @@ import classes from "./NavigationItems.module.css"
 import { UseStateValue } from "../../../store/StateProvider";
 
 const navigationItems = () => {
-    const [{user}] = UseStateValue();
+    const [{ user }] = UseStateValue();
 
     return (
         <ul className={classes.NavigationItems}>
-            <NavigationItem exact link="/">Home</NavigationItem>
+            <NavigationItem exact link="/#home">Home</NavigationItem>
             <NavigationItem link="/playground">Playground</NavigationItem>
-            {user == null ?      
+            {user == null ?
                 <NavigationItem link="/u/login">Login</NavigationItem>
-            :
+                :
                 <NavigationItem link="/u/logout">Logout</NavigationItem>
             }
-            <NavigationItem link="/contact-us">Contact Us</NavigationItem>
+            <NavigationItem link="/#footer" special="true"> Contact Us </NavigationItem>
         </ul>
     )
 }
