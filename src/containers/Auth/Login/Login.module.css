@@ -1,0 +1,33 @@
+.Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:91.62vh;
+}
+
+.SubWrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: grey;
+    min-height: 45vh;
+    min-width: 50vh;
+    background-image: linear-gradient(147deg, #ff8585 0%, #ff4646 74%);
+    border-radius: 20px;
+    margin-top: 70px;
+}
+
+.SvgMan {
+    position: absolute;
+    top: 110px;
+    left: 40%;
+}
+
+.Header {
+    padding: 20px;
+    margin-top: -20px;
+    color: #ffffff;
+}
