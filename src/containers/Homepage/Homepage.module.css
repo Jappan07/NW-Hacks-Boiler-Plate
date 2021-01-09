@@ -1,31 +1,102 @@
-* {
-    line-height: 1.5;
-    letter-spacing: 1.5px;
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+/* animating the Music text */
+.AnimateMusic {
+    font-size: 3.5rem;
+    line-height: calc(20px + 20vh);
+    /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+    text-shadow: 0 0 5px #ffabe1, 0 0 15px #ffabe1, 0 0 20px #ffabe1, 0 0 40px #ffabe1, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #eff8ff;
+    font-family: "Sacramento", cursive;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
 }
+
+@-webkit-keyframes blink {
+
+    20%,
+    24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        /*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+        text-shadow: 0 0 5px #ffabe1, 0 0 15px #ffabe1, 0 0 20px #ffabe1, 0 0 40px #ffabe1, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+        color: #eff8ff;
+    }
+}
+
+@keyframes blink {
+
+    20%,
+    24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        /*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+        text-shadow: 0 0 5px #ffabe1, 0 0 15px #ffabe1, 0 0 20px #ffabe1, 0 0 40px #ffabe1, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+        color: #eff8ff;
+    }
+}
+
+/* animated the Music text */
 
 .Hero {
     background-size: 42% 80%;
+    background-image: -webkit-linear-gradient(left, #fff 0, #fdc9b5);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-color: #ffe6e6;
     background-position: bottom right;
     width: 100%;
-    height: 70vh;
+    height: 55%;
 }
 
 .Content {
     font-size: 110%;
-    padding: 13% 5% 10% 20%;
+    padding: 13% 5% 20% 10%;
+    position: relative;
+    animation-name: content;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.Content h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.Button {
     position: relative;
     animation-name: content;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
 
-.Content h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
 @keyframes content {
     0% {
         left: -1000px;
@@ -36,21 +107,11 @@
     }
 }
 
-.Button {
-    position: relative;
-    animation-name: content;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes content {
-    0% {
-        left: -1000px;
-    }
-
-    100% {
-        left: 0px;
-    }
+#icon {
+    font-weight: 600;
+    font-size: 3.5rem;
+    margin-right: 20px;
+    color: #ffb396;
 }
 
 .CompanyFeaturesSection {
@@ -60,25 +121,7 @@
 
 .CompanyFeaturesSection h1 {
     font-size: 2.5rem;
-    text-align: center;
-    font-weight: 300;
-}
-
-.CompanyFeaturesSection .Text {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    color: gray;
-    padding: 0px 200px;
-}
-
-.CompanyFeaturesSection .Text span {
-    color: #6155a6;
     font-weight: 600;
-}
-
-.Features .Icon {
-    font-size: 5rem;
-    color: #6155a6;
 }
 
 .Features {
@@ -89,18 +132,42 @@
     align-items: center;
 }
 
-.Features h3 {
-    font-weight: 300;
-    margin-bottom: 20px;
+.Features img {
+    width: 70%;
 }
 
 .Features p {
-    font-size: 1.1rem;
-    color: grey;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #ff8585;
     padding: 0 20px;
 }
 
-.Icon {
-    font-size: 5rem;
-    color: #6155a6;
+.CompanyFeature {
+    background-image: linear-gradient(to bottom right, #fff5c0, rgba(255, 0, 0, 0));
+    display: flex;
+    align-items: center;
+    padding: 28px;
+    width: 50%;
+    height: 500px;
+    background-color: #fff;
+    margin-right: 30px;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.FeatureContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FeatureContent img {
+    margin-bottom: 50px;
+}
+
+.CompanyFeature:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }

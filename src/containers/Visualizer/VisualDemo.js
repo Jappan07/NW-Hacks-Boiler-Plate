@@ -4,7 +4,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import EqualizerIcon from '@material-ui/icons/Equalizer';
 import { makeStyles } from '@material-ui/core/styles';
-import classes from "./Visualizer.module.css";
+import './Visualizer.css';
 
 const useStyles = makeStyles(theme => ({
     flexContainer: {
@@ -43,7 +43,7 @@ export default function VisualDemo(props) {
     }
 
     return (
-        <div className="">
+        <div id="vizualizerWrapper">
             <div>
                 <Tooltip
                     title="Start"
@@ -68,7 +68,6 @@ export default function VisualDemo(props) {
                     />
                 )}
             </div>
-
         </div>
 
     );
