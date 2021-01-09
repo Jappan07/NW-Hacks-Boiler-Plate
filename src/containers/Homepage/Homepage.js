@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Wrapper from "../../hoc/Wrapper"
 import classes from "./Homepage.module.css"
 import Button from "../../components/UI/Button/Button"
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import videoSvg from "../../assets/video-illustration.svg"
 import codeSvg from "../../assets/code-illustration.svg"
 import musicSvg from "../../assets/music-illustration.svg"
@@ -105,7 +106,7 @@ class Homepage extends Component {
                 <section className="footer">
                     <div className={classes.TeamContainer}>
                         <span><img src={teamLogo} alt="Hacker House logo" /></span>
-                        <h1>Team HACKER HOUSE</h1>
+                        <h1>Created with <FavoriteIcon style={{ fontSize: "20px", position: "relative", top: "3px" }} className={classes.Heart} /> by team HACKER HOUSE</h1>
                         <p>Copyright © 2021-3010</p>
                     </div>
                 </section>

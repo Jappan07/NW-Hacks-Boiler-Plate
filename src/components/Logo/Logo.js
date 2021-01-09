@@ -2,11 +2,11 @@ import React from "react"
 import companyLogo from "../../assets/logo.png"
 import classes from "./Logo.module.css"
 
-const logo = () => {
+const logo = (props) => {
     return (
         <div className={classes.Logo}>
-            <img src={companyLogo} alt="logo" />
-            <h1>Gesture to Music</h1>
+            <img style={{ height: props.height }} src={companyLogo} alt="logo" />
+            <h1>{props.children}</h1>
         </div>
     )
 }
