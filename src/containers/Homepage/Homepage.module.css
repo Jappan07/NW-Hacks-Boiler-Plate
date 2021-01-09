@@ -273,3 +273,9 @@
         transform: rotate(90deg);
     }
 }
+
+@media(min-width:1001px) and (max-width:1700px) {
+    .Author {
+        flex-direction: column;
+    }
+}

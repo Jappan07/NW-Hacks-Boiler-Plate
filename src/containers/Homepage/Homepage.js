@@ -5,8 +5,8 @@ import Button from "../../components/UI/Button/Button"
 import videoSvg from "../../assets/video-illustration.svg"
 import codeSvg from "../../assets/code-illustration.svg"
 import musicSvg from "../../assets/music-illustration.svg"
+import teamLogo from "../../assets/Hacker house.png"
 // import teamLogo from "../../assets/Hacker house.png"
-import { ReactComponent as Logo} from "../../assets/HHLogo.svg"
 import anushProfile from "../../assets/anush.jpeg"
 import jappanProfile from "../../assets/jappan.jpeg"
 import vedantProfile from "../../assets/vedant.jpeg"
@@ -104,8 +104,7 @@ class Homepage extends Component {
                 </section>
                 <section className="footer">
                     <div className={classes.TeamContainer}>
-                        {/* <span><img src={teamLogo} alt="Hacker House logo" /></span> */}
-                        <Logo height="150px"/>
+                        <span><img src={teamLogo} alt="Hacker House logo" /></span>
                         <h1>Team HACKER HOUSE</h1>
                         <p>Copyright © 2021-3010</p>
                     </div>

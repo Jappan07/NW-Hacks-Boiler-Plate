@@ -15,7 +15,6 @@ const sideDrawer = (props) => {
         <Wrapper>
             <Backdrop show={props.open} clicked={props.closed} />
             <div className={attachedClasses.join(" ")}>
-                <Logo />
                 <nav>
                     <NavigationItems />
                 </nav>
