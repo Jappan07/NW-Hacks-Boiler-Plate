@@ -31,9 +31,6 @@
     54%,
     56%,
     100% {
-        /*     color: #fccaff;
-    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
         text-shadow: 0 0 5px #ffabe1, 0 0 15px #ffabe1, 0 0 20px #ffabe1, 0 0 40px #ffabe1, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
         color: #eff8ff;
     }
@@ -170,4 +167,75 @@
 
 .CompanyFeature:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.ContactUs {
+    color: #fff;
+    background-color: #ff8585;
+    padding: 80px 100px 200px;
+    text-align: center;
+}
+
+.ContactUs h1 {
+    font-size: 2.5rem;
+}
+
+.TeamContainer {
+    padding: 20px 100px;
+    background-color: #fff5c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.TeamContainer h1 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.TeamContainer img {
+    width: 90px;
+}
+
+.TeamContainer p {
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.ProfileSection {
+    padding-bottom: 40px;
+    padding-top: 120px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.ProfileBox {
+    width: 25%;
+    padding: 20px 30px;
+}
+
+.Author img {
+    float: left;
+    width: 120px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.Author h5 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.Author span {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.Author a {
+    color: #fff;
+    text-decoration: none;
 }

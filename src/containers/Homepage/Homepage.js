@@ -5,7 +5,11 @@ import Button from "../../components/UI/Button/Button"
 import videoSvg from "../../assets/video-illustration.svg"
 import codeSvg from "../../assets/code-illustration.svg"
 import musicSvg from "../../assets/music-illustration.svg"
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import teamLogo from "../../assets/Hacker house.png"
+import anushProfile from "../../assets/anush.jpeg"
+import jappanProfile from "../../assets/jappan.jpeg"
+import vedantProfile from "../../assets/vedant.jpeg"
+import riteshProfile from "../../assets/ritesh.jpeg"
 
 class Homepage extends Component {
     state = {
@@ -54,7 +58,48 @@ class Homepage extends Component {
                         </div>
                     </div>
                 </section>
-
+                <section className="site-section-2">
+                    <div className={classes.ContactUs}>
+                        <h1>Contact Us</h1>
+                        <div className={classes.ProfileSection}>
+                            <div className={classes.ProfileBox}>
+                                <div className={classes.Author}>
+                                    <img src={anushProfile} alt="Anush Krishna" />
+                                    <a href="https://www.linkedin.com/in/anush-krishna-v-8270941a0/" target="_blank" rel="noreferrer"><h5>Anush Krishna V</h5></a>
+                                    <span>ML Enthusiast</span>
+                                </div>
+                            </div>
+                            <div className={classes.ProfileBox}>
+                                <div className={classes.Author}>
+                                    <img src={jappanProfile} alt="Jappanjeet Singh" />
+                                    <a href="https://www.linkedin.com/in/jappanjeet-singh/" target="_blank" rel="noreferrer"><h5>Jappanjeet Singh</h5></a>
+                                    <span>Frontend Developer</span>
+                                </div>
+                            </div>
+                            <div className={classes.ProfileBox}>
+                                <div className={classes.Author}>
+                                    <img src={vedantProfile} alt="Vedant Khairnar" />
+                                    <a href="https://www.linkedin.com/in/vedantkhairnar/" target="_blank" rel="noreferrer"><h5>Vedant Khairnar</h5></a>
+                                    <span>ML Enthusiast</span>
+                                </div>
+                            </div>
+                            <div className={classes.ProfileBox}>
+                                <div className={classes.Author}>
+                                    <img src={riteshProfile} alt="Ritesh Bucha" />
+                                    <a href="https://www.linkedin.com/in/bucharitesh/" target="_blank" rel="noreferrer"><h5>Ritesh Bucha</h5></a>
+                                    <span>Full Stack Developer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="footer">
+                    <div className={classes.TeamContainer}>
+                        <span><img src={teamLogo} alt="Hacker House logo" /></span>
+                        <h1>Team HACKER HOUSE</h1>
+                        <p>Copyright © 2021-3010</p>
+                    </div>
+                </section>
             </Wrapper>
         )
     }
