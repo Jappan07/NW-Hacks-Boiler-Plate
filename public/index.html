@@ -40,6 +40,21 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <div class="contentarea">
+    <h1>
+      Using Javascript to capture Photo
+    </h1>
+    <div class="camera">
+      <video id="video">Video stream not available.</video>
+    </div>
+    <div><button id="startbutton">Take photo</button></div>
+    <canvas id="canvas"></canvas>
+    <a id="anchorTag" href="/Users/jappanjeetsingh/Desktop/recorderapp/images"></a>
+    <div class="output">
+      <img id="photo" alt="The screen capture will appear in this box.">
+    </div>
+  </div>
+  <script src="./script.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({

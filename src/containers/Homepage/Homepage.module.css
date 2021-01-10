@@ -275,6 +275,10 @@
     animation: beat .5s infinite alternate;
 }
 
+.HHLogo img {
+    border-radius: 50%;
+}
+
 @keyframes beat {
     to {
         transform: scale(1.2);
