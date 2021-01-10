@@ -22,7 +22,7 @@ It determines what hand gesture you are making from the American Sign Language a
 ## Challenges we ran into 
 - Experienced great difficult in sending the image from the frontend to the API as API accepted only URLs 
 - Faced time constraints with respect to the idea.
-- 
+
 ## Accomplishments that we're proud of 🎯
 - Even though in the 24hr hackathon, we made an awesome interface with an authentication system.
 - Developed a Highly accurate Deep Learning model and trained over a data of thousands of images.
@@ -32,7 +32,6 @@ It determines what hand gesture you are making from the American Sign Language a
 ## What we learned 🧠
 - About postman API.
 - Conversion of Image to DataURL and vice versa
-- 
 
 ## What's next for Hakuna Matata 🚀
 - At moment, it works on images(kept due to less number of Cloud credits). When brought commercially with huge number of cloud credits, can be expanded to videos as well.
