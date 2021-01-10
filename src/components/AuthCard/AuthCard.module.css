@@ -11,13 +11,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 50px;
     background-color: grey;
-    min-height: 45vh;
+    min-height: 60vh;
     min-width: 50vh;
     background-image: linear-gradient(147deg, #ff8585 0%, #ff4646 74%);
     border-radius: 20px;
-    margin-top: 70px;
+    margin-top: 150px;
 }
 
 .SvgMan {
@@ -28,6 +28,8 @@
 
 .Header {
     padding: 20px;
-    margin-top: -20px;
     color: #ffffff;
+    text-transform: uppercase;
+    font-size: xx-large;
 }
+

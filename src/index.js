@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import reducer, { initialState } from "./store/reducer";
-import { StateProvider } from "./store/StateProvider";
+import { AuthProvider } from "./store/AuthProvider";
 
 const app = (
-    <StateProvider initialState={initialState} reducer={reducer}>
+    <AuthProvider>
         <App />
-    </StateProvider>
+    </AuthProvider>
 )
 
 ReactDOM.render(app, document.getElementById('root'));

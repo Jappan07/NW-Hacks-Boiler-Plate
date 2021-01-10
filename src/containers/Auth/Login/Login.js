@@ -1,46 +1,84 @@
-import React, {useState} from 'react';
-import { auth, provider } from "../../../firebase";
-import Button from "../../../components/UI/Button/Button";
-import classes from "./Login.module.css"
+import React, { useRef, useState } from 'react';
+import { Link, useHistory } from "react-router-dom"
+import { useAuth } from "../../../store/AuthProvider"
+import AuthCard from "../../../components/AuthCard/AuthCard";
+import TextField from '@material-ui/core/TextField';
+import "../Auth.module.css"
 
-import { ReactComponent as SvgMan } from "../../../assets/svgMan.svg";
-import { Redirect} from "react-router-dom";
-import { UseStateValue } from "../../../store/StateProvider";
-import { actionTypes } from "../../../store/reducer";
+import IconButton from '@material-ui/core/IconButton';
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import Input from '@material-ui/core/Input';
+import Button from "../../../components/UI/Button/Button";
 
 function Login() {
-    const [{}, dispatch] = UseStateValue();
-    const [routeRedirect, setRouteRedirect] = useState(false);
+    const emailRef = useRef()
+    const passwordRef = useRef()
+    const { login, currentUser } = useAuth()
+    const [error, setError] = useState("")
+    const [loading, setLoading] = useState(false)
+    const history = useHistory()
 
-    const signIn = async(e) => {
-        e.preventDefault();
-        await auth
-                .signInWithPopup(provider)
-                .then((reuslt) => {
-                    setRouteRedirect(true);
-                    dispatch({
-                        type: actionTypes.SET_USER,
-                        user: reuslt.user,
-                    });
-                })
-                .catch((error) => alert(error.message));
+    if(currentUser){
+        history.push("/playground")
+    }
+
+    const [values, setValues] = useState({
+        showPassword: false,
+      });
+  
+    const handleClickShowPassword = () => {
+    setValues({ ...values, showPassword: !values.showPassword });
     };
 
-    const redirect = routeRedirect;
-    if(redirect){
-        return <Redirect to="/playground" />  
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+      };
+
+    async function handleSubmit(e) {
+        e.preventDefault()
+    
+        try {
+          setError("")
+          setLoading(true)
+          await login(emailRef.current.value, passwordRef.current.value)
+          history.push("/playground")
+        } catch {
+          setError("Failed to log in")
+        }
+    
+        setLoading(false)
     }
 
     return (
-        <div className={classes.Wrapper}>
-            <div className={classes.SubWrapper}>
-                <div className={classes.SvgMan}>
-                    <SvgMan height="200px"/>
-                </div>
-                <h1 className={classes.Header}>Login</h1>
-                <Button variant="outlined" clicked={signIn}>Sign in with Google</Button>
-            </div>
-        </div>
+        <AuthCard name="Login">
+                {error && <alert variant="danger">{error}</alert>}
+                    <form onSubmit={handleSubmit} className="Formfill">
+                        <label>
+                            <input 
+                                type="email"
+                                ref={emailRef}
+                                id="email" 
+                                placeholder="Email"
+                                required />
+                            <span>Email</span>
+                        </label>
+                        <label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                placeholder="Password" 
+                                ref={passwordRef}
+                                required />
+                            <span>Password</span>
+                        </label>
+                        <input 
+                            disabled={loading} 
+                            type="submit"
+                            value="Login" />
+                    </form>                 
+        </AuthCard>
     )
 }
 
