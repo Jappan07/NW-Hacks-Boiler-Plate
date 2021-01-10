@@ -19,7 +19,7 @@ It determines what hand gesture you are making from the American Sign Language a
 - Integrated the model with webapp and made an API for the same.
 - Added the Keyboard Music Player.
 
-## Challenges we ran into 
+## Challenges we ran into ❓
 - Experienced great difficult in sending the image from the frontend to the API as API accepted only URLs 
 - Faced time constraints with respect to the idea.
 
