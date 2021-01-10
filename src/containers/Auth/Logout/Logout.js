@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useAuth } from "../../../store/AuthProvider";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import LogoutIllustration from "../../../assets/logout.svg"
 import AuthCard from "../../../components/AuthCard/AuthCard";
 
 function Logout() {
     const [error, setError] = useState("")
     const { logout, currentUser } = useAuth()
-    const [loading, setLoading] = useState(false)
+    const [loading] = useState(false)
     const history = useHistory()
 
     console.log(currentUser)

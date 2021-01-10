@@ -8,7 +8,6 @@
 
     var video = null;
     var canvas = null;
-    var photo = null;
     var startbutton = null;
 
     function startup() {
@@ -48,7 +47,6 @@
             takepicture();
             ev.preventDefault();
         }, false);
-
         clearphoto();
     }
 
@@ -61,7 +59,6 @@
     }
 
     function takepicture() {
-        var context = canvas.getContext('2d');
         const a = document.getElementById("anchorTag")
         if (width && height) {
             canvas.width = width;

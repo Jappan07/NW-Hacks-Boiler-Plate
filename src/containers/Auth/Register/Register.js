@@ -1,8 +1,7 @@
 import React, { useRef, useState } from 'react'
-import { Link, useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import { useAuth } from "../../../store/AuthProvider"
 import AuthCard from "../../../components/AuthCard/AuthCard";
-import classes from "../Auth.module.css"
 import registerImage from "../../../assets/register.svg"
 
 function Register() {

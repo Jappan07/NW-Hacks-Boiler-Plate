@@ -11,7 +11,6 @@ import anushProfile from "../../assets/anush.jpeg"
 import jappanProfile from "../../assets/jappan.jpeg"
 import vedantProfile from "../../assets/vedant.jpeg"
 import riteshProfile from "../../assets/ritesh.jpeg"
-import WebcamStream from "../WebRTC/WebcamStream"
 
 class Homepage extends Component {
     state = {
