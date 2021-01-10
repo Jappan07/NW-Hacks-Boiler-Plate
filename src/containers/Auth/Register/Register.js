@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react'
 import { Link, useHistory } from "react-router-dom"
 import { useAuth } from "../../../store/AuthProvider"
+import AuthCard from "../../../components/AuthCard/AuthCard";
+import classes from "../Auth.module.css"
 
 function Register() {
     const emailRef = useRef()
@@ -26,7 +28,7 @@ function Register() {
           setError("")
           setLoading(true)
           await signup(emailRef.current.value, passwordRef.current.value)
-          history.push("/")
+          history.push("/playground")
         } catch {
           setError("Failed to create an account")
         }
@@ -35,18 +37,42 @@ function Register() {
     }
 
     return (
-        <div>
-            <h2 className="text-center mb-4">Sign Up</h2>
+      <AuthCard name="Register">
           {error && <alert variant="danger">{error}</alert>}
-          <form onSubmit={handleSubmit}>
-            <input type="email" ref={emailRef} required />
-            <input type="password" ref={passwordRef} required />
-            <input type="password" ref={passwordConfirmRef} required />    
-            <button disabled={loading} type="submit">
-              Sign Up
-            </button>
+          <form onSubmit={handleSubmit} className="Formfill">
+            <label>
+              <input 
+                  type="email"
+                  ref={emailRef}
+                  id="email" 
+                  placeholder="Email"
+                  required />
+              <span>Email</span>
+            </label>
+            <label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="Password" 
+                    ref={passwordRef}
+                    required />
+                <span>Password</span>
+            </label>
+            <label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="Password" 
+                    ref={passwordConfirmRef}
+                    required />
+                <span>Password</span>
+            </label>
+            <input 
+              disabled={loading} 
+              type="submit"
+              value="SignUp" />
           </form>
-        </div>
+     </AuthCard>
     )
 }
 

@@ -19,9 +19,9 @@ const App = () => {
                 <Route exact path="/" component={Homepage} />
                 <Route path="/contact-us" component={ContactUs} />
                 <PrivateRoute path="/playground" component={Playground} />
-                <Route path="/logout" component={Logout} />
                 <Route path="/u/login" component={Login} />
                 <Route path="/u/register" component={Register} />
+                <PrivateRoute Route path="/u/logout" component={Logout} />
               </Switch>
             </Suspense >       
       </Layout>

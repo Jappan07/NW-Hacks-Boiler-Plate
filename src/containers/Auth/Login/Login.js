@@ -1,10 +1,16 @@
 import React, { useRef, useState } from 'react';
-import classes from "./Login.module.css"
 import { Link, useHistory } from "react-router-dom"
 import { useAuth } from "../../../store/AuthProvider"
+import AuthCard from "../../../components/AuthCard/AuthCard";
+import TextField from '@material-ui/core/TextField';
+import "../Auth.module.css"
 
-import { ReactComponent as SvgMan } from "../../../assets/svgMan.svg";
-
+import IconButton from '@material-ui/core/IconButton';
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import Input from '@material-ui/core/Input';
+import Button from "../../../components/UI/Button/Button";
 
 function Login() {
     const emailRef = useRef()
@@ -18,6 +24,18 @@ function Login() {
         history.push("/playground")
     }
 
+    const [values, setValues] = useState({
+        showPassword: false,
+      });
+  
+    const handleClickShowPassword = () => {
+    setValues({ ...values, showPassword: !values.showPassword });
+    };
+
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+      };
+
     async function handleSubmit(e) {
         e.preventDefault()
     
@@ -25,7 +43,7 @@ function Login() {
           setError("")
           setLoading(true)
           await login(emailRef.current.value, passwordRef.current.value)
-          history.push("/")
+          history.push("/playground")
         } catch {
           setError("Failed to log in")
         }
@@ -34,22 +52,33 @@ function Login() {
     }
 
     return (
-        <div className={classes.Wrapper}>
-            <div className={classes.SubWrapper}>
-                <div className={classes.SvgMan}>
-                    <SvgMan height="200px"/>
-                </div>
-                <h1 className={classes.Header}>Login</h1>
+        <AuthCard name="Login">
                 {error && <alert variant="danger">{error}</alert>}
-                    <form onSubmit={handleSubmit}>
-                        <input type="email" ref={emailRef} required />
-                        <input type="password" ref={passwordRef} required />    
-                        <button disabled={loading} type="submit">
-                        Sign Up
-                        </button>
-                    </form>
-            </div>
-        </div>
+                    <form onSubmit={handleSubmit} className="Formfill">
+                        <label>
+                            <input 
+                                type="email"
+                                ref={emailRef}
+                                id="email" 
+                                placeholder="Email"
+                                required />
+                            <span>Email</span>
+                        </label>
+                        <label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                placeholder="Password" 
+                                ref={passwordRef}
+                                required />
+                            <span>Password</span>
+                        </label>
+                        <input 
+                            disabled={loading} 
+                            type="submit"
+                            value="Login" />
+                    </form>                 
+        </AuthCard>
     )
 }
 
