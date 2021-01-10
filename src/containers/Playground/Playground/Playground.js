@@ -5,10 +5,7 @@ const playground = () => {
     return (
         <div>
             <h1>
-                {/*Pages ( step by step )*/}
-                    {/*Welcome page & instructions with cautions*/}
-                    {/*Video Record*/}
-                    {/*Output and again to welcome*/}
+                Visualizer
             </h1>
             <AudioDataContainer />
         </div>
