@@ -1,34 +1,36 @@
-import React, {useState} from 'react';
-import { auth, provider } from "../../../firebase";
-import Button from "../../../components/UI/Button/Button";
+import React, { useRef, useState } from 'react';
 import classes from "./Login.module.css"
+import { Link, useHistory } from "react-router-dom"
+import { useAuth } from "../../../store/AuthProvider"
 
 import { ReactComponent as SvgMan } from "../../../assets/svgMan.svg";
-import { Redirect} from "react-router-dom";
-import { UseStateValue } from "../../../store/StateProvider";
-import { actionTypes } from "../../../store/reducer";
+
 
 function Login() {
-    const [{}, dispatch] = UseStateValue();
-    const [routeRedirect, setRouteRedirect] = useState(false);
+    const emailRef = useRef()
+    const passwordRef = useRef()
+    const { login, currentUser } = useAuth()
+    const [error, setError] = useState("")
+    const [loading, setLoading] = useState(false)
+    const history = useHistory()
 
-    const signIn = async(e) => {
-        e.preventDefault();
-        await auth
-                .signInWithPopup(provider)
-                .then((reuslt) => {
-                    setRouteRedirect(true);
-                    dispatch({
-                        type: actionTypes.SET_USER,
-                        user: reuslt.user,
-                    });
-                })
-                .catch((error) => alert(error.message));
-    };
+    if(currentUser){
+        history.push("/playground")
+    }
 
-    const redirect = routeRedirect;
-    if(redirect){
-        return <Redirect to="/playground" />  
+    async function handleSubmit(e) {
+        e.preventDefault()
+    
+        try {
+          setError("")
+          setLoading(true)
+          await login(emailRef.current.value, passwordRef.current.value)
+          history.push("/")
+        } catch {
+          setError("Failed to log in")
+        }
+    
+        setLoading(false)
     }
 
     return (
@@ -38,7 +40,14 @@ function Login() {
                     <SvgMan height="200px"/>
                 </div>
                 <h1 className={classes.Header}>Login</h1>
-                <Button variant="outlined" clicked={signIn}>Sign in with Google</Button>
+                {error && <alert variant="danger">{error}</alert>}
+                    <form onSubmit={handleSubmit}>
+                        <input type="email" ref={emailRef} required />
+                        <input type="password" ref={passwordRef} required />    
+                        <button disabled={loading} type="submit">
+                        Sign Up
+                        </button>
+                    </form>
             </div>
         </div>
     )
