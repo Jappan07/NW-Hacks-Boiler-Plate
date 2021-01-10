@@ -1,5 +1,5 @@
 # NW HACKS HACKATHON PROJECT SUBMISSION
-![Logo](https://nwhacks-3cdee.web.app/static/media/logo.fd5382c5.png)
+<img width="100px" src="https://nwhacks-3cdee.web.app/static/media/logo.fd5382c5.png">
 
 ## Inspiration
 Ever wanted to lead your own choir? Wanted to generate music just by your moving your hands?
