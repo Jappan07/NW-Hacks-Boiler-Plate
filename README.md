@@ -35,3 +35,9 @@ It determines what hand gesture you are making from the American Sign Language a
 
 ## What's next for Hakuna Matata 🚀
 - At moment, it works on images(kept due to less number of Cloud credits). When brought commercially with huge number of cloud credits, can be expanded to videos as well.
+
+#### Link for the demo
+<a href="https://youtu.be/RzHq0ZU_XrM">Youtube Link🔗</a>
+
+#### Deployed at - 
+<a href="https://nwhacks-3cdee.web.app">Enjoy🔗</a>
