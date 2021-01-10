@@ -16,7 +16,7 @@ const App = () => {
     routes = (
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route exact path="/contact-us" component={ContactUs} />
+        {/* <Route exact path="/contact-us" component={ContactUs} /> */}
         <Route exact path="/u/login" component={Login} />
         <Redirect to="/u/login" />
       </Switch>
@@ -26,7 +26,7 @@ const App = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/contact-us" component={ContactUs} />
+          {/* <Route exact path="/contact-us" component={ContactUs} /> */}
           <Route exact path="/playground" component={Playground} />
           {/* <Route exact path="/logout" component={Logout} /> */}
           <Redirect to="/playground" />

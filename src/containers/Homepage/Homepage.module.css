@@ -286,7 +286,18 @@
         text-align: center;
         padding-bottom: 600px;
         background-size: 65%, 65%, 100%;
-        background-position: center bottom 300px, center bottom 200px;
+        background-position: 0, 0, 0
+    }
+
+    @keyframes animatedBackground {
+        0% {
+            background-position-x: 2000px, 2000px, 0;
+            /* background-position: 0 -100%; */
+        }
+
+        100% {
+            background-position: center bottom 300px, center bottom 200px;
+        }
     }
 
     .Content h1 {
@@ -329,7 +340,18 @@
         text-align: center;
         padding-bottom: 600px;
         background-size: 60%, 60%, 100%;
-        background-position: center bottom 300px, center bottom 200px;
+        background-position: 0, 0, 0;
+    }
+
+    @keyframes animatedBackground {
+        0% {
+            background-position-x: 2000px, 2000px, 0;
+            /* background-position: 0 -100%; */
+        }
+
+        100% {
+            background-position: center bottom 300px, center bottom 200px;
+        }
     }
 
     .CompanyFeaturesSection {
