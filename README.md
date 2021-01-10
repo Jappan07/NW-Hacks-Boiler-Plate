@@ -1,4 +1,4 @@
-<img width="200px" src="https://github.com/Jappan07/NW-Hacks-Hakunamatata/blob/master/src/assets/nwHacks.png">
+<img width="500px" src="https://github.com/Jappan07/NW-Hacks-Hakunamatata/blob/master/src/assets/nwHacks.png">
 
 # NW HACKS HACKATHON PROJECT SUBMISSION
 <img width="100px" src="https://nwhacks-3cdee.web.app/static/media/logo.fd5382c5.png">
