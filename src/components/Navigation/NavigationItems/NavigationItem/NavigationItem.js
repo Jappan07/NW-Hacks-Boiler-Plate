@@ -5,8 +5,8 @@ import classes from "./NavigationItem.module.css"
 
 const navigationItem = (props) => {
     const handleScroll = () => {
-        const element = document.getElementById("footer")
-        const yOffset = 0;
+        const element = document.getElementById("contact-us")
+        const yOffset = -50;
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
     }

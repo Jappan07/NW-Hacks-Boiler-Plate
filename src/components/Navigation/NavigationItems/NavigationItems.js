@@ -18,7 +18,7 @@ export default function NavigationItems(...props) {
             :
             <NavigationItem link="/u/logout">Logout</NavigationItem>
             }
-            <NavigationItem link="/#footer" special="true"> Contact Us </NavigationItem>
+            <NavigationItem link="/#contact-us" special="true"> Contact Us </NavigationItem>
         </ul>
     )
 }
