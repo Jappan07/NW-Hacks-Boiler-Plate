@@ -2,7 +2,7 @@ import React, { Suspense } from "react"
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Layout from "./containers/Layout/Layout"
 import Homepage from "./containers/Homepage/Homepage"
-import Playground from "./containers/Playground/Playground/Playground"
+import Playground from "./containers/Playground/Playground"
 import ContactUs from "./components/ContactUs/ContactUs"
 import Login from "./containers/Auth/Login/Login"
 import Register from "./containers/Auth/Register/Register"

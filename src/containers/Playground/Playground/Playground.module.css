@@ -1,9 +1,0 @@
-.containers {
-    position: absolute;
-    top: 50%;
-    background: linear-gradient(to right, #ff4646, #ff8585);
-}
-
-.text {
-    color: red;
-}
