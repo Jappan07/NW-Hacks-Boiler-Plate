@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import "./Playground.module.css";
 import { Stage, Layer, Circle } from 'react-konva';
 import Konva from 'konva';
 import { v4 as uuidv4 } from 'uuid';
 import {Spring} from 'react-spring/renderprops';
 import { Howl } from 'howler';
+import { red } from '@material-ui/core/colors';
 
 class Playground extends Component {
   constructor(props) {
@@ -179,6 +181,8 @@ class Playground extends Component {
 
   render() {
     return (
+      <>
+        <h1 className="text">Press a key on your Keyboard !!</h1>
       <Stage width={window.innerWidth} height={window.innerHeight}>
         <Layer>
           {this.state.circles.map(circle => (
@@ -195,8 +199,16 @@ class Playground extends Component {
           ))}
         </Layer>
       </Stage>
+      </>
     );
   }
 }
+
+// const Boxes = styled.div `
+//   padding: 20px,
+//   color: black,
+//   fontWeight: bold,
+//   textAlign: center
+// `;
 
 export default Playground;
