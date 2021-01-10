@@ -11,6 +11,7 @@ import anushProfile from "../../assets/anush.jpeg"
 import jappanProfile from "../../assets/jappan.jpeg"
 import vedantProfile from "../../assets/vedant.jpeg"
 import riteshProfile from "../../assets/ritesh.jpeg"
+import WebcamStream from "../WebRTC/WebcamStream"
 
 class Homepage extends Component {
     state = {
@@ -104,11 +105,12 @@ class Homepage extends Component {
                 </section>
                 <section id="footer">
                     <div className={classes.TeamContainer}>
-                        <span><img src={teamLogo} alt="Hacker House logo" /></span>
+                        <span className={classes.HHLogo}><img src={teamLogo} alt="Hacker House logo" /></span>
                         <h1>Created with <FavoriteIcon style={{ fontSize: "20px", position: "relative", top: "3px" }} className={classes.Heart} /> by team HACKER HOUSE</h1>
                         <p>Copyright © 2021-3010</p>
                     </div>
                 </section>
+                {/* <WebcamStream /> */}
             </Wrapper>
         )
     }
