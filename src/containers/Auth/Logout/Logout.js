@@ -25,12 +25,12 @@ function Logout() {
     return (
         <AuthCard>
             {error && <alert variant="danger">{error}</alert>}
-            <form className="Formfill"> 
+            <form onSubmit={handleLogout} className="Formfill"> 
                 <span className="text">
                 Are you Sure You wanna go <strong>{currentUser.email} ?</strong>
                 </span>
                 <input 
-                    disabled={loading} 
+                    disabled={loading}
                     type="submit"
                     value="Logout" />
             </form>
