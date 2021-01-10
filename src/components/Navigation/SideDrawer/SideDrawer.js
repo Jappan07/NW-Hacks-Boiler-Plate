@@ -1,6 +1,6 @@
 import React from "react"
 import Wrapper from "../../../hoc/Wrapper"
-import Logo from "../../Logo/Logo"
+// import Logo from "../../Logo/Logo"
 import Backdrop from "../../UI/Backdrop/Backdrop"
 import NavigationItems from "../NavigationItems/NavigationItems"
 import classes from "./SideDrawer.module.css"

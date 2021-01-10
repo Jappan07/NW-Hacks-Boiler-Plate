@@ -8,7 +8,7 @@ const navigationItems = () => {
 
     return (
         <ul className={classes.NavigationItems}>
-            <NavigationItem exact link="/#home">Home</NavigationItem>
+            <NavigationItem exact link="/">Home</NavigationItem>
             <NavigationItem link="/playground">Playground</NavigationItem>
             {user == null ?
                 <NavigationItem link="/u/login">Login</NavigationItem>

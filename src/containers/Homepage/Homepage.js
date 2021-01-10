@@ -31,27 +31,27 @@ class Homepage extends Component {
                         </div>
                     </div>
                 </div>
-                <section className="site-section-1">
+                <section className="site-section-1" data-aos="fade-down">
                     <div className={classes.CompanyFeaturesSection}>
                         <h1>
                             How it Works?
                         </h1>
                         <div className={classes.Features}>
-                            <div className={classes.CompanyFeature}>
+                            <div className={classes.CompanyFeature} data-aos="zoom-in">
                                 <div className={classes.FeatureContent}>
                                     <img src={videoSvg} alt="illustration" />
                                     <p>Model trains on input.</p>
                                 </div>
                             </div>
-                            <div id={classes.icon}>→</div>
-                            <div className={classes.CompanyFeature}>
+                            <div id={classes.icon} data-aos="fade-right" data-aos-delay="100">→</div>
+                            <div className={classes.CompanyFeature} data-aos="zoom-in" data-aos-delay="100">
                                 <div className={classes.FeatureContent}>
                                     <img src={codeSvg} alt="illustration" />
                                     <p>Sonic Pi code gets generated through the video</p>
                                 </div>
                             </div>
-                            <div id={classes.icon}>→</div>
-                            <div className={classes.CompanyFeature}>
+                            <div id={classes.icon} data-aos="fade-right" data-aos-delay="300">→</div>
+                            <div className={classes.CompanyFeature} data-aos="zoom-in" data-aos-delay="200">
                                 <div className={classes.FeatureContent}>
                                     <img src={musicSvg} alt="illustration" />
                                     <p>Music is produced</p>
@@ -62,9 +62,9 @@ class Homepage extends Component {
                 </section>
                 <section className="site-section-2">
                     <div className={classes.ContactUs}>
-                        <h1>Contact Us</h1>
+                        <h1 data-aos="zoom-in">Contact Us</h1>
                         <div className={classes.ProfileSection}>
-                            <div className={classes.ProfileBox}>
+                            <div className={classes.ProfileBox} data-aos="fade-right" data-aos-delay="0">
                                 <div className={classes.Author}>
                                     <img src={anushProfile} alt="Anush Krishna" />
                                     <div>
@@ -73,7 +73,7 @@ class Homepage extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={classes.ProfileBox}>
+                            <div className={classes.ProfileBox} data-aos="fade-right" data-aos-delay="50">
                                 <div className={classes.Author}>
                                     <img src={jappanProfile} alt="Jappanjeet Singh" />
                                     <div>
@@ -82,7 +82,7 @@ class Homepage extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={classes.ProfileBox}>
+                            <div className={classes.ProfileBox} data-aos="fade-right" data-aos-delay="150">
                                 <div className={classes.Author}>
                                     <img src={vedantProfile} alt="Vedant Khairnar" />
                                     <div>
@@ -91,7 +91,7 @@ class Homepage extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={classes.ProfileBox}>
+                            <div className={classes.ProfileBox} data-aos="fade-right" data-aos-delay="250">
                                 <div className={classes.Author}>
                                     <img src={riteshProfile} alt="Ritesh Bucha" />
                                     <div>
