@@ -31,9 +31,9 @@ class Homepage extends Component {
                         </div>
                     </div>
                 </div>
-                <section className="site-section-1" data-aos="fade-down">
+                <section className="site-section-1">
                     <div className={classes.CompanyFeaturesSection}>
-                        <h1>
+                        <h1 data-aos="fade-down" data-aos-offset="10">
                             How it Works?
                         </h1>
                         <div className={classes.Features}>
@@ -43,14 +43,14 @@ class Homepage extends Component {
                                     <p>Model trains on input.</p>
                                 </div>
                             </div>
-                            <div id={classes.icon} data-aos="fade-right" data-aos-delay="100">→</div>
+                            <div id={classes.icon} data-aos="fade-right" data-aos-delay="200">→</div>
                             <div className={classes.CompanyFeature} data-aos="zoom-in" data-aos-delay="100">
                                 <div className={classes.FeatureContent}>
                                     <img src={codeSvg} alt="illustration" />
                                     <p>Sonic Pi code gets generated through the video</p>
                                 </div>
                             </div>
-                            <div id={classes.icon} data-aos="fade-right" data-aos-delay="300">→</div>
+                            <div id={classes.icon} data-aos="fade-right" data-aos-delay="400">→</div>
                             <div className={classes.CompanyFeature} data-aos="zoom-in" data-aos-delay="200">
                                 <div className={classes.FeatureContent}>
                                     <img src={musicSvg} alt="illustration" />
@@ -61,7 +61,7 @@ class Homepage extends Component {
                     </div>
                 </section>
                 <section className="site-section-2">
-                    <div className={classes.ContactUs}>
+                    <div id="contact-us" className={classes.ContactUs}>
                         <h1 data-aos="zoom-in">Contact Us</h1>
                         <div className={classes.ProfileSection}>
                             <div className={classes.ProfileBox} data-aos="fade-right" data-aos-delay="0">
