@@ -14,7 +14,6 @@
     function startup() {
         video = document.getElementById('video');
         canvas = document.getElementById('canvas');
-        photo = document.getElementById('photo');
         startbutton = document.getElementById('startbutton');
 
         navigator.mediaDevices.getUserMedia({
@@ -74,7 +73,6 @@
             a.href = data;
             a.download = "canvas-image.jpg"
             a.click()
-
         } else {
             clearphoto();
         }
