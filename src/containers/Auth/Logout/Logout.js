@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from "../../../store/AuthProvider";
 import { Link, useHistory } from "react-router-dom";
+import LogoutIllustration from "../../../assets/logout.svg"
 import AuthCard from "../../../components/AuthCard/AuthCard";
 
 function Logout() {
@@ -13,23 +14,25 @@ function Logout() {
 
     async function handleLogout() {
         setError("")
-    
+
         try {
-          await logout()
-          history.push("/")
+            await logout()
+            history.push("/")
         } catch {
-          setError("Failed to log out")
+            setError("Failed to log out")
         }
     }
 
     return (
-        <AuthCard>
+        <AuthCard illustration={LogoutIllustration}>
             {error && <alert variant="danger">{error}</alert>}
-            <form onSubmit={handleLogout} className="Formfill"> 
-                <span className="text">
-                Are you Sure You wanna go <strong>{currentUser.email} ?</strong>
+            <form onSubmit={handleLogout} className="Formfill">
+                <span className="text" style={{ "fontSize": "1.2rem" }}>
+                    Comeback soon!!
+                    <br></br>
+                    <strong style={{ "textTransform": "uppercase" }}>{currentUser.email}</strong>
                 </span>
-                <input 
+                <input
                     disabled={loading}
                     type="submit"
                     value="Logout" />

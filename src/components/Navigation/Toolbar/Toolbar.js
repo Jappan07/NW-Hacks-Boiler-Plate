@@ -8,7 +8,7 @@ const toolbar = (props) => {
     return (
         <header className={classes.Toolbar}>
             <DrawerToggle clicked={props.drawerToggleClicked} />
-            <Logo>Gesture to Music</Logo>
+            <Logo>Hakuna Matata</Logo>
             <nav className={classes.DesktopOnly}>
                 <NavigationItems />
             </nav>

@@ -4,7 +4,7 @@ import { useAuth } from "../../../store/AuthProvider"
 import AuthCard from "../../../components/AuthCard/AuthCard";
 import TextField from '@material-ui/core/TextField';
 import "../Auth.module.css"
-
+import loginIllustration from "../../../assets/login.svg";
 import IconButton from '@material-ui/core/IconButton';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
@@ -20,64 +20,64 @@ function Login() {
     const [loading, setLoading] = useState(false)
     const history = useHistory()
 
-    if(currentUser){
+    if (currentUser) {
         history.push("/playground")
     }
 
     const [values, setValues] = useState({
         showPassword: false,
-      });
-  
+    });
+
     const handleClickShowPassword = () => {
-    setValues({ ...values, showPassword: !values.showPassword });
+        setValues({ ...values, showPassword: !values.showPassword });
     };
 
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
-      };
+    };
 
     async function handleSubmit(e) {
         e.preventDefault()
-    
+
         try {
-          setError("")
-          setLoading(true)
-          await login(emailRef.current.value, passwordRef.current.value)
-          history.push("/playground")
+            setError("")
+            setLoading(true)
+            await login(emailRef.current.value, passwordRef.current.value)
+            history.push("/playground")
         } catch {
-          setError("Failed to log in")
+            setError("Failed to log in")
         }
-    
+
         setLoading(false)
     }
 
     return (
-        <AuthCard name="Login">
-                {error && <alert variant="danger">{error}</alert>}
-                    <form onSubmit={handleSubmit} className="Formfill">
-                        <label>
-                            <input 
-                                type="email"
-                                ref={emailRef}
-                                id="email" 
-                                placeholder="Email"
-                                required />
-                            <span>Email</span>
-                        </label>
-                        <label>
-                            <input 
-                                type="password" 
-                                id="password" 
-                                placeholder="Password" 
-                                ref={passwordRef}
-                                required />
-                            <span>Password</span>
-                        </label>
-                        <input 
-                            disabled={loading} 
-                            type="submit"
-                            value="Login" />
-                    </form>                 
+        <AuthCard illustration={loginIllustration} name="Login">
+            {error && <alert variant="danger">{error}</alert>}
+            <form onSubmit={handleSubmit} className="Formfill">
+                <label>
+                    <input
+                        type="email"
+                        ref={emailRef}
+                        id="email"
+                        placeholder="Email"
+                        required />
+                    <span>Email</span>
+                </label>
+                <label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        ref={passwordRef}
+                        required />
+                    <span>Password</span>
+                </label>
+                <input
+                    disabled={loading}
+                    type="submit"
+                    value="Login" />
+            </form>
         </AuthCard>
     )
 }
